@@ -1,0 +1,49 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Administrative
+    chapters:
+      - file: syllabus
+      - file: LOs
+      - file: Schedule
+  - caption: Course Downloads
+    chapters:
+      - file: _downloads
+      # - file: _slides
+      # - file: _PPs
+  - caption: Block 1 Readings
+    chapters:
+      - file: Block1Reading/Obj01/ECE215_Obj01_Reading
+      - file: Block1Reading/Obj02/ECE215_Obj02_Reading
+      - file: Block1Reading/Obj03/ECE215_Obj03_Reading
+      - url: https://control.com/technical-articles/active-power-reactive-power-apparent-power-and-the-role-of-power-factor/
+        title: Objective 1.4
+      - file: Block1Reading/Obj05/ECE215_Obj05_Reading
+      - file: Block1Reading/Obj06/ECE215_Obj06_Reading
+      - file: Block1Reading/Obj07/ECE215_Obj07_Reading
+      - file: Block1Reading/Obj08/ECE215_Obj08_Reading
+  - caption: Block 2 Readings
+    chapters:
+      - file: Block2Reading/Obj01/ECE215_B2_Obj01_Reading
+      - file: Block2Reading/Obj02/ECE215_B2_Obj02_Reading
+      - file: Block2Reading/Obj03/ECE215_B2_Obj03_Reading
+      - file: Block2Reading/Obj04/ECE215_B2_Obj04_Reading
+      - file: Block2Reading/Obj05/ECE215_B2_Obj05_Reading
+      - file: Block2Reading/Obj06/ECE215_B2_Obj06_Reading
+      - file: Block2Reading/Obj07/ECE215_B2_Obj07_Reading
+      - file: Block2Reading/Obj08/ECE215_B2_Obj08_Reading
+  - caption: Block 3 Readings
+    chapters:
+      - file: Block3Reading/Obj01/ECE215_B3_Obj01_Reading
+      - file: Block3Reading/Obj02/ECE215_B3_Obj02_Reading
+      - file: Block3Reading/Obj03/ECE215_B3_Obj03_Reading
+      - file: Block3Reading/Obj04/ECE215_B3_Obj04_Reading
+      - file: Block3Reading/Obj05/ECE215_B3_Obj05_Reading
+      - file: Block3Reading/Obj06/ECE215_B3_Obj06_Reading
+      - file: Block3Reading/Obj07/ECE215_B3_Obj07_Reading
+      - file: Block3Reading/Obj08/ECE215_B3_Obj08_Reading
+      - file: Block3Reading/Obj09/ECE215_B3_Obj09_Reading
+      - file: Block3Reading/Obj10/ECE215_B3_Obj10_Reading
