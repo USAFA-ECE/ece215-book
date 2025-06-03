@@ -16,6 +16,6 @@ If you have trouble viewing, you can download the 215S PDF [here](_static/ECE215
 
 [//]: # (<embed src="_static/ECE215_Syllabus_Spring2025.pdf" width="100%" height="600px" type="application/pdf">)
 
-[//]: # (If you have trouble viewing, you can download the 215 PDF [here](_static/ECE215_Syllabus_Spring2025.pdf).)
+[//]: # "If you have trouble viewing, you can download the 215 PDF [here](_static/ECE215_Syllabus_Spring2025.pdf)."
 
 [//]: # (Both syllabi are also available on on our Teams page.)  
