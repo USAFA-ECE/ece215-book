@@ -12,6 +12,7 @@ parts:
   - caption: Course Downloads
     chapters:
       - file: _downloads
+      - file: Equation_Sheet
       # - file: _slides
       # - file: _PPs
   - caption: Block 1 Readings
