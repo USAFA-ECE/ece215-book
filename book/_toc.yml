@@ -12,7 +12,7 @@ parts:
   - caption: Course Downloads
     chapters:
       - file: _downloads
-      - url: book\ECE_215_Equation_Sheet.pdf
+      - url: book\_static\ECE_215_Equation_Sheet.pdf
         title: Equation Sheet
       # - file: _slides
       # - file: _PPs
