@@ -12,7 +12,8 @@ parts:
   - caption: Course Downloads
     chapters:
       - file: _downloads
-      - file: Equation_Sheet
+      - file: book\ECE_215_Equation_Sheet.pdf
+        title: Equation Sheet
       # - file: _slides
       # - file: _PPs
   - caption: Block 1 Readings
