@@ -1,6 +1,6 @@
 # Course Learning Objectives
 
-This course will focus on specific learning objectives, which are key concepts required to succeed in this course and retain knowledge for future academic and professional endeavors. Your mastery (i.e. understanding) of each learning objective will be assessed with quizzes, projects, and examinations (midterm and final).
+This course will focus on specific learning objectives, which are key concepts required to succeed in this course and retain knowledge for future academic and professional endeavors. Your mastery (i.e., understanding) of each learning objective will be assessed with quizzes, projects, and examinations (midterm and final).
 
 You will see each of these learning objectives referenced across course material by the number you see on this list. The objectives are listed in the order in which they will be covered. Specifically, you will see these learning objectives in your syllabus, reading materials, slides, quizzes, and exams. 
 
@@ -38,8 +38,7 @@ Note that the number to the left of the decimal for your learning objective is t
 | [3.3](Block3Reading/Obj03/ECE215_B3_Obj03_Reading) | I can calculate the signal wavelength, antenna size, max antenna gain, and basic gain pattern for dipole, monopole, and parabolic dish antennas. |
 | [3.4](Block3Reading/Obj04/ECE215_B3_Obj04_Reading) | I can calculate the maximum line-of-sight (LOS) distance between two terrestrial objects.   |
 | [3.5](Block3Reading/Obj05/ECE215_B3_Obj05_Reading) | I can calculate the maximum communication distance between a transmitter and receiver using the Friis and Line-of-Sight equations.  |
-| [3.6](Block3Reading/Obj06/ECE215_B3_Obj06_Reading) | I can calculate the distance from a monostatic radar to a stationary target based on pulse timing, assuming a direct line-of-sight path. |
-| [3.7](Block3Reading/Obj07/ECE215_B3_Obj07_Reading) | I can calculate the maximum detection range from a radar antenna to a target using the Radar Range equation. |  
-| [3.8](Block3Reading/Obj08/ECE215_B3_Obj08_Reading) | I can calculate the range resolution, unambiguous range, and target velocity for pulse Doppler radar. |
-| [3.9](Block3Reading/Obj09/ECE215_B3_Obj09_Reading) | I can calculate signal-to-noise ratio (SNR) and determine the effects on wireless communications. |
-| [3.10](Block3Reading/Obj10/ECE215_B3_Obj10_Reading) | I can analyze jamming scenarios using the Friis equation, RADAR equation, and SNR. |
+| [3.6](Block3Reading/Obj06/ECE215_B3_Obj06_Reading) | I can calculate the maximum detection range from a radar antenna to a target using the Radar Range equation. |  
+| [3.7](Block3Reading/Obj07/ECE215_B3_Obj07_Reading) | I can calculate the range resolution, unambiguous range, and target velocity for pulse Doppler radar. |
+| [3.8](Block3Reading/Obj08/ECE215_B3_Obj08_Reading) | I can calculate signal-to-noise ratio (SNR) and determine the effects on wireless communications. |
+| [3.9](Block3Reading/Obj09/ECE215_B3_Obj09_Reading) | I can analyze jamming scenarios using the Friis equation, RADAR equation, and SNR. |
