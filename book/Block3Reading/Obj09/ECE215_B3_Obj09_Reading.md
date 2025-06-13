@@ -1,4 +1,4 @@
-# Objective 3.09
+# Objective 3.9
 
 | LO# | Description |
 |----------|----------|
