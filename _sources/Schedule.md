@@ -7,7 +7,7 @@ This is meant to serve an a _notional_ schedule for ECE215. We will keep this up
  ### Block 1: Resistive Circuits Analysis and Power Distribution  
 | Lesson | Topic | Due Dates |
 |----------|----------|----------|
-| 1 | Course Intro |  |  
+| 1 | [Course Overview](_static/B1_Obj00_CourseOverview_Slides.pdf) |  |  
 | 2 | [Obj 1.1](Block1Reading/Obj01/ECE215_Obj01_Reading) | Quiz 0 Due (Skills Review) |
 | 3 | [Obj 1.1](Block1Reading/Obj01/ECE215_Obj01_Reading) |  |  
 | 4 | [Obj 1.1](Block1Reading/Obj01/ECE215_Obj01_Reading)  |   |  
