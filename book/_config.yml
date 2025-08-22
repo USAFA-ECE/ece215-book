@@ -17,10 +17,17 @@ ipywidgets:
   use_show_widgets_button: true
 
 launch_buttons:
-# Add a "Launch on Google Colab" button to .ipynb files
-#  colab_url: "https://colab.research.google.com"
-# Allow readers to interact directly with code cells in the book without leaving the page
-  thebe: true
+#  colab_url: "https://colab.research.google.com" # Add a "Launch on Google Colab" button to .ipynb files
+  thebe: true # Enables the "Live Code" button to activate Thebe
+  # --- BinderHub Settings (Optional but Recommended for Thebe) ---
+  # These settings tell Thebe where to find the BinderHub to provision the kernel
+  # that runs your code. Without a BinderHub, Thebe won't have a kernel to execute the code.
+  # Use the official mybinder.org if your project isn't too demanding.
+  binderhub_url: "https://mybinder.org" #
+  binder_repo_base: "https://github.com/" # The base URL of your repository (e.g., GitHub, GitLab).
+  binder_repo_org: "your-github-USAFA-ECE" # Your GitHub username or organization name.
+  binder_repo_name: "ece215-book" # The name of your GitHub repository.
+  binder_repo_branch: "main" # The branch where your book's content resides (e.g., 'main' or 'master').
 
 # Define the name of the latex output file for PDF builds
 latex:
