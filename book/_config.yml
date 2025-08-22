@@ -25,7 +25,7 @@ launch_buttons:
   # Use the official mybinder.org if your project isn't too demanding.
   binderhub_url: "https://mybinder.org" #
   binder_repo_base: "https://github.com/" # The base URL of your repository (e.g., GitHub, GitLab).
-  binder_repo_org: "your-github-USAFA-ECE" # Your GitHub username or organization name.
+  binder_repo_org: "USAFA-ECE" # Your GitHub username or organization name.
   binder_repo_name: "ece215-book" # The name of your GitHub repository.
   binder_repo_branch: "main" # The branch where your book's content resides (e.g., 'main' or 'master').
 
