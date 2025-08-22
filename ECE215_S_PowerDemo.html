@@ -1,0 +1,850 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ECE 215/S Power Demo &#8212; ECE215/S Course Webpage</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ECE215_S_PowerDemo';</script>
+    <link rel="icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="ECE215/S Course Webpage - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="ECE215/S Course Webpage - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to ECE215S, Principles of Electronic Cyber Warfare!
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Administrative</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LOs.html">Course Learning Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Schedule.html">Course Schedule</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Downloads</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="_downloads.html">Slides and Practice Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="equation-sheet-link.html">Equation Sheet</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Block 1 Readings</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Block1Reading/Obj01/ECE215_Obj01_Reading.html">Objective 1.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block1Reading/Obj02/ECE215_Obj02_Reading.html">Objective 1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block1Reading/Obj03/ECE215_Obj03_Reading.html">Objective 1.3</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://control.com/technical-articles/active-power-reactive-power-apparent-power-and-the-role-of-power-factor/">Objective 1.4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block1Reading/Obj05/ECE215_Obj05_Reading.html">Objective 1.5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block1Reading/Obj06/ECE215_Obj06_Reading.html">Objective 1.6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block1Reading/Obj07/ECE215_Obj07_Reading.html">Objective 1.7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block1Reading/Obj08/ECE215_Obj08_Reading.html">Objective 1.8</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Block 2 Readings</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Block2Reading/Obj01/ECE215_B2_Obj01_Reading.html">Objective 2.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block2Reading/Obj02/ECE215_B2_Obj02_Reading.html">Objective 2.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block2Reading/Obj03/ECE215_B2_Obj03_Reading.html">Objective 2.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block2Reading/Obj04/ECE215_B2_Obj04_Reading.html">Objective 2.4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block2Reading/Obj05/ECE215_B2_Obj05_Reading.html">Objective 2.5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block2Reading/Obj06/ECE215_B2_Obj06_Reading.html">Objective 2.6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block2Reading/Obj07/ECE215_B2_Obj07_Reading.html">Objective 2.7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block2Reading/Obj08/ECE215_B2_Obj08_Reading.html">Objective 2.8</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Block 3 Readings</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Block3Reading/Obj01/ECE215_B3_Obj01_Reading.html">Objective 3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block3Reading/Obj02/ECE215_B3_Obj02_Reading.html">Objective 3.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block3Reading/Obj03/ECE215_B3_Obj03_Reading.html">Objective 3.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block3Reading/Obj04/ECE215_B3_Obj04_Reading.html">Objective 3.4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block3Reading/Obj05/ECE215_B3_Obj05_Reading.html">Objective 3.5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block3Reading/Obj06/ECE215_B3_Obj06_Reading.html">Objective 3.6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block3Reading/Obj07/ECE215_B3_Obj07_Reading.html">Objective 3.7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block3Reading/Obj08/ECE215_B3_Obj08_Reading.html">Objective 3.8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Block3Reading/Obj09/ECE215_B3_Obj09_Reading.html">Objective 3.9</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/usafa-ece/jupyterbook-template/blob/main/book/ECE215_S_PowerDemo.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/usafa-ece/jupyterbook-template" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/usafa-ece/jupyterbook-template/issues/new?title=Issue%20on%20page%20%2FECE215_S_PowerDemo.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/ECE215_S_PowerDemo.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ECE 215/S Power Demo</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-start-with-p-inst-and-p-avg-for-a-simple-ac-circuit">Let’s start with <span class="math notranslate nohighlight">\(P_{inst}\)</span> and <span class="math notranslate nohighlight">\(P_{avg}\)</span> for a simple AC circuit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#our-circuit">Our circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-and-current">Voltage and Current</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-analysis">Power Analysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-now-complicate-our-ac-circuit-with-inductors-and-capacitors">Let’s now complicate our AC circuit with inductors and capacitors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-math-behind-the-plots">The math behind the plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-of-the-impact-of-phase-difference-on-our-power-components">Analysis of the impact of phase difference on our power components</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ece-215-s-power-demo">
+<h1><strong>ECE 215/S Power Demo</strong><a class="headerlink" href="#ece-215-s-power-demo" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>In this demo, we will visually analyze the power quantities as discussed in class.</p></li>
+<li><p>We encourage you to click <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">code</span></code> to see the parameters used for these plots, <em>especially</em> if you have never written Python code before.</p></li>
+<li><p>This is a great way to get a feel for what goes into building these plots - yet another aspect of the ECE discipline! This code follows the math exactly as we did in the lessons for Objs 1.3-1.4.</p></li>
+<li><p><strong>Beside each <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">code</span></code> link is a <em>play button</em>. You will need to click each of those as we go to make the plots interactive!</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Code Block - Import Libraries</span>
+
+<span class="c1"># math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="c1"># plotting tools</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">clear_output</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">ipywidgets</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">widgets</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#@title Code Block - Import Libraries</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># math</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># plotting tools</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="let-s-start-with-p-inst-and-p-avg-for-a-simple-ac-circuit">
+<h2>Let’s start with <span class="math notranslate nohighlight">\(P_{inst}\)</span> and <span class="math notranslate nohighlight">\(P_{avg}\)</span> for a simple AC circuit<a class="headerlink" href="#let-s-start-with-p-inst-and-p-avg-for-a-simple-ac-circuit" title="Link to this heading">#</a></h2>
+<p><strong>Don’t forget to click the <em>play button</em> otherwise none of this will work!</strong></p>
+<section id="our-circuit">
+<h3>Our circuit<a class="headerlink" href="#our-circuit" title="Link to this heading">#</a></h3>
+<p>This simple AC circuit only consists of an AC voltage source and a resistor.</p>
+<ol class="arabic simple">
+<li><p>Will voltage and current ever be out of phase?</p></li>
+</ol>
+</section>
+<section id="voltage-and-current">
+<h3>Voltage and Current<a class="headerlink" href="#voltage-and-current" title="Link to this heading">#</a></h3>
+<p>First, we create a cosine wave for our alternating voltage source based on the anatomy of an AC signal as we learned in Obj 1.3! Default values are shown in the initial slider bar.</p>
+<p>Let’s make sure we’ve mastered how to draw our voltage and current plots.</p>
+<ol class="arabic simple">
+<li><p>Write out the cosine equation for your voltage using the default values. Does the voltage plot match?</p></li>
+<li><p>Given the resistance and voltage of the circuit, compute the cosine equation for your current. Does the current plot match?</p></li>
+<li><p>Change some of the parameters using the sliders (to include frequency). Do the current and voltage plots match your intuition?</p></li>
+</ol>
+<p>Once you feel you’ve fully grasped how these plots are generated, we can look at power.</p>
+</section>
+<section id="power-analysis">
+<h3>Power Analysis<a class="headerlink" href="#power-analysis" title="Link to this heading">#</a></h3>
+<p>Remember, this circuit only consists of an AC-power supply and resistor.
+Let’s analyze <span class="math notranslate nohighlight">\(P_{inst}\)</span> and <span class="math notranslate nohighlight">\(P_{avg}\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Recall <span class="math notranslate nohighlight">\(P_{inst} = v(t) * i(t)\)</span>. Does the Instantaneous Power plot match?</p></li>
+<li><p>Will <span class="math notranslate nohighlight">\(P_{inst}\)</span> ever be negative?</p></li>
+<li><p>Recall <span class="math notranslate nohighlight">\(P_{avg} = \frac{1}{2}V_{pk}I_{pk}= V_{RMS}I_{RMS}\)</span>. Does the Average Power plot match?</p></li>
+<li><p>Will <span class="math notranslate nohighlight">\(P_{avg}\)</span> ever be negative?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title AC Circuit Quantities</span>
+
+<span class="c1"># Define the plotting function</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_ac_circuit</span><span class="p">(</span><span class="n">resistance</span><span class="p">,</span> <span class="n">peak_voltage</span><span class="p">,</span> <span class="n">frequency</span><span class="p">):</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+    <span class="n">voltage</span> <span class="o">=</span> <span class="n">peak_voltage</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">frequency</span> <span class="o">*</span> <span class="n">time</span><span class="p">)</span>
+    <span class="n">current</span> <span class="o">=</span> <span class="p">(</span><span class="n">peak_voltage</span> <span class="o">/</span> <span class="n">resistance</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">frequency</span> <span class="o">*</span> <span class="n">time</span><span class="p">)</span>
+    <span class="n">power_inst</span> <span class="o">=</span> <span class="n">voltage</span> <span class="o">*</span> <span class="n">current</span>
+
+    <span class="c1"># Compute P_avg</span>
+    <span class="n">V_pk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">voltage</span><span class="p">)</span>
+    <span class="n">I_pk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">current</span><span class="p">)</span>
+    <span class="n">P_avg</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">V_pk</span> <span class="o">*</span> <span class="n">I_pk</span>
+
+    <span class="c1"># Could instead compute P_avg using V_rms and I_rms</span>
+    <span class="c1"># V_rms = V_pk / np.sqrt(2)</span>
+    <span class="c1"># I_rms = I_pk / np.sqrt(2)</span>
+    <span class="c1"># P_avg = V_rms * I_rms</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">voltage</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Voltage (V)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Current (A)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">power_inst</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Instantaneous Power (W)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;violet&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="p">[</span><span class="n">P_avg</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Average Power (W)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (ms)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Amplitude&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;AC Circuit Analysis&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>  <span class="c1"># Adjust y-axis limits as needed</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Create interactive sliders</span>
+<span class="n">resistance_slider</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                                        <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Resistance (Ω):&#39;</span><span class="p">,</span>
+                                        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;500px&#39;</span><span class="p">),</span>
+                                        <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;description_width&#39;</span><span class="p">:</span> <span class="s1">&#39;100px&#39;</span><span class="p">})</span>
+<span class="n">peak_voltage_slider</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">17</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                                          <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Peak Voltage (V):&#39;</span><span class="p">,</span>
+                                          <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;500px&#39;</span><span class="p">),</span>
+                                        <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;description_width&#39;</span><span class="p">:</span> <span class="s1">&#39;100px&#39;</span><span class="p">})</span>
+<span class="n">frequency_slider</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                                       <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Frequency (Hz):&#39;</span><span class="p">,</span>
+                                       <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;500px&#39;</span><span class="p">),</span>
+                                        <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;description_width&#39;</span><span class="p">:</span> <span class="s1">&#39;100px&#39;</span><span class="p">})</span>
+
+<span class="c1"># Make sure plot updates every time you move a slider by calling the plot_ac_circuit function</span>
+<span class="n">widgets</span><span class="o">.</span><span class="n">interactive</span><span class="p">(</span><span class="n">plot_ac_circuit</span><span class="p">,</span> <span class="n">resistance</span><span class="o">=</span><span class="n">resistance_slider</span><span class="p">,</span> <span class="n">peak_voltage</span><span class="o">=</span><span class="n">peak_voltage_slider</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="n">frequency_slider</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "a36f1b796dc740288377214f8545e927", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+</section>
+</section>
+<section id="let-s-now-complicate-our-ac-circuit-with-inductors-and-capacitors">
+<h2>Let’s now complicate our AC circuit with inductors and capacitors<a class="headerlink" href="#let-s-now-complicate-our-ac-circuit-with-inductors-and-capacitors" title="Link to this heading">#</a></h2>
+<p><strong>Don’t forget to click the <em>play button</em> otherwise none of this will work!</strong></p>
+<section id="background">
+<h3>Background<a class="headerlink" href="#background" title="Link to this heading">#</a></h3>
+<p>We won’t actually use capacitors and inductors in our circuit, but we will simulate their use by adjusting how far out of phase our voltage and current are.</p>
+<p>These phase changes, however, aren’t just a result of people building circuits with too many capacitors or inductors. Other real-world systems have inductive and capacitive loads associated with them that can also result in voltage and current being out of phase. For example, an AC motor places an inductive load on a system.</p>
+<p>For the following plots, we hold our frequency, voltage, and resistor values constant as we intend to only analyze the phase shift’s impact on power components with the following plots. You are, however, welcome to adjust frequency, voltage, and resistor values within the code itself!</p>
+</section>
+<section id="the-math-behind-the-plots">
+<h3>The math behind the plots<a class="headerlink" href="#the-math-behind-the-plots" title="Link to this heading">#</a></h3>
+<p><strong>Instantaneous power:</strong> the power we are getting at any point in time <span class="math notranslate nohighlight">\(t\)</span> (same equation as above), measured in Watts (W).<br />
+$<span class="math notranslate nohighlight">\(P_{inst} = v(t) * i(t)\)</span>$</p>
+<p><strong>Average (or Apparent) Power:</strong> the average power we think we should get (same equation as <span class="math notranslate nohighlight">\(P_{avg}\)</span> for in-phase circuits), measured in Volts-Amperes (VA).<br />
+$<span class="math notranslate nohighlight">\(S = P_{apparent} = \frac{1}{2}V_{pk}I_{pk}= V_{rms}I_{rms}\)</span>$</p>
+<p><strong>Power Factor:</strong> the reduction in power based on phase shift between voltage and current. This is a scale factor (i.e., multiply <span class="math notranslate nohighlight">\(P_{avg}\)</span> by this to get <span class="math notranslate nohighlight">\(P_{real}\)</span>), no units.<br />
+$<span class="math notranslate nohighlight">\(pF = \cos{(\theta_v - \theta_i)}\)</span>$</p>
+<p><strong>Real Power:</strong> this is the actual power available to do work. It is <span class="math notranslate nohighlight">\(S\)</span> reduced by <span class="math notranslate nohighlight">\(pF\)</span>, measured in Watts (W).<br />
+$<span class="math notranslate nohighlight">\(P = P_{real} = S*pF = V_{rms}I_{rms}\cos{(\theta_v - \theta_i)}\)</span>$</p>
+<p><strong>Reactive Power:</strong> this accounts for conductive and inductive effects in AC circuit, measured in Volts-Amperes-Reactive (VAR).<br />
+$<span class="math notranslate nohighlight">\(Q = P_{reactive} = V_{rms}I_{rms}\sin{(\theta_v - \theta_i)}\)</span>$</p>
+<p><strong>Power Triangle:</strong> S, P, and Q are related! A more inductive circuit has a positive reactive power (current lags voltage and power triangle is positive). A more capacative circuit has a negative reactive power (current leads voltage and power triangle is negative).<br />
+$<span class="math notranslate nohighlight">\(P^2 + Q^2 = S^2\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( Q = \pm \sqrt{S^2 - P^2} \)</span><span class="math notranslate nohighlight">\(
+Note 1: The phase difference between voltage and current is the angle between \)</span>S<span class="math notranslate nohighlight">\( and \)</span>P$.</p>
+<p>Note 2: “ELI the ICEman” is a mnemonic used to remember the phase relationship between voltage and current in AC circuits: E (voltage) comes before I (current) in an L (inductive) circuit (ELI), while I (current) comes before E (voltage) in a C (capacitive) circuit (ICE). Why E for voltage? In the early days of electrical engineering, voltage used to be called electromotive force, or emf, and the letter E represented it.</p>
+</section>
+<section id="analysis-of-the-impact-of-phase-difference-on-our-power-components">
+<h3>Analysis of the impact of phase difference on our power components<a class="headerlink" href="#analysis-of-the-impact-of-phase-difference-on-our-power-components" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>With 0 phase difference, how does the Quantities plot below compare to the AC Circuit plot we built above?</p></li>
+<li><p>Adjust your phase difference using the slider. Does <span class="math notranslate nohighlight">\(P\)</span> increase or decrease the farther out of phase current and voltage are with respect to one another? Why? Hint: analyze <span class="math notranslate nohighlight">\(P_{inst}\)</span> plot and recall the math behind that plot.</p></li>
+<li><p>Does the sign of the phase difference matter when you compute <span class="math notranslate nohighlight">\(P\)</span>?</p></li>
+<li><p>Can real power ever be negative?</p></li>
+<li><p>Where does <span class="math notranslate nohighlight">\(P\)</span> line up relative to <span class="math notranslate nohighlight">\(P_{inst}\)</span> on the middle plot?</p></li>
+<li><p>In our code, we set <span class="math notranslate nohighlight">\(\theta_v = 0\)</span> and <span class="math notranslate nohighlight">\(\theta_i =\)</span> the phase difference from the slider bar. Does the orientation of your power triangle match up with what we know about current leading or lagging voltage?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title AC Circuit Power Components</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_power_relationships</span><span class="p">(</span><span class="n">phase_diff</span><span class="p">):</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>  <span class="c1"># Time in seconds (100 ms)</span>
+    <span class="n">frequency</span> <span class="o">=</span> <span class="mi">60</span>  <span class="c1"># Hz</span>
+    <span class="n">peak_voltage</span> <span class="o">=</span> <span class="mi">17</span> <span class="c1"># Volts</span>
+    <span class="n">resistor</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># Ohms</span>
+    <span class="n">theta_v</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Fixed voltage phase</span>
+    <span class="n">theta_i</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">phase_diff</span><span class="p">)</span> <span class="c1"># current phase shift from slider</span>
+
+    <span class="c1"># AC Voltage and Current</span>
+    <span class="n">voltage</span> <span class="o">=</span> <span class="n">peak_voltage</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">frequency</span> <span class="o">*</span> <span class="n">time</span> <span class="o">-</span> <span class="n">theta_v</span><span class="p">)</span>  <span class="c1"># Sinusoidal voltage</span>
+    <span class="n">current</span> <span class="o">=</span> <span class="n">peak_voltage</span><span class="o">/</span><span class="n">resistor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">frequency</span> <span class="o">*</span> <span class="n">time</span> <span class="o">-</span> <span class="n">theta_i</span><span class="p">)</span>
+
+    <span class="c1"># Power computations</span>
+    <span class="n">power_inst</span> <span class="o">=</span> <span class="n">voltage</span> <span class="o">*</span> <span class="n">current</span>
+    <span class="n">V_pk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">voltage</span><span class="p">)</span>
+    <span class="n">I_pk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">current</span><span class="p">)</span>
+    <span class="n">V_rms</span> <span class="o">=</span> <span class="n">V_pk</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">I_rms</span> <span class="o">=</span> <span class="n">I_pk</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="c1"># Apparent Power: this is just P_avg from last code block! It&#39;s what we thought we should get.</span>
+    <span class="n">S</span> <span class="o">=</span> <span class="n">V_rms</span> <span class="o">*</span> <span class="n">I_rms</span>
+    <span class="c1"># Power Factor: this is the reduction in power based on phase shift between voltage and current.</span>
+    <span class="n">pF</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta_v</span><span class="o">-</span><span class="n">theta_i</span><span class="p">)</span>
+    <span class="c1"># Real Power: this is the actual average power, reduced S by pF</span>
+    <span class="n">P</span> <span class="o">=</span> <span class="n">V_rms</span> <span class="o">*</span> <span class="n">I_rms</span> <span class="o">*</span> <span class="n">pF</span>
+    <span class="c1"># Reactive Power: VAR to account for conductive and inductive effects in AC circuit</span>
+    <span class="n">Q</span> <span class="o">=</span> <span class="n">V_rms</span> <span class="o">*</span> <span class="n">I_rms</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta_v</span><span class="o">-</span><span class="n">theta_i</span><span class="p">)</span> <span class="c1"># Reactive Power</span>
+
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+    <span class="c1"># Plot 1: Voltage and Current</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">voltage</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Voltage (V)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Current (A)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">power_inst</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Instantaneous Power (W)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;violet&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Amplitude&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Quantities&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
+
+    <span class="c1"># Plot 2: Power Components</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">power_inst</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Instantaneous Power&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;violet&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="p">[</span><span class="n">P</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Real Power (P)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="p">[</span><span class="n">S</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Apparent Power (S)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-.&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="p">[</span><span class="n">Q</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Reactive Power (Q)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Power&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Power Components&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
+
+    <span class="c1"># Plot 3: Power triangle plot</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">head_length</span><span class="o">=</span><span class="mf">.1</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Real Power (P)&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">head_length</span><span class="o">=</span><span class="mf">.1</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Reactive Power (Q)&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">S</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">Q</span><span class="o">/</span><span class="n">P</span><span class="p">)),</span> <span class="n">S</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">Q</span><span class="o">/</span><span class="n">P</span><span class="p">)),</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">head_length</span><span class="o">=</span><span class="mf">.1</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Apparent Power (S)&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="c1"># # overlay theta</span>
+    <span class="c1"># arc_radius = 0.05</span>
+    <span class="c1"># theta = np.linspace(0, theta_i, 100)</span>
+    <span class="c1"># x_arc = S * np.cos(theta_i) + arc_radius * np.cos(theta)</span>
+    <span class="c1"># y_arc = S * np.sin(theta_i) + arc_radius * np.sin(theta)</span>
+    <span class="c1"># axes[2].plot(x_arc, y_arc, color=&#39;black&#39;, linestyle=&#39;--&#39;)</span>
+    <span class="c1"># axes[2].text(S * np.cos(theta_i) + arc_radius * 1.2, -S * np.sin(theta_i), f&#39;{phase_diff:.1f}°&#39;, fontsize=10, color=&#39;black&#39;)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Real Power (W)&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Reactive Power (VAR)&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Power Triangle&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;AC Circuit Analysis with Phase Difference = </span><span class="si">{</span><span class="n">phase_diff</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> degrees&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span> <span class="c1"># prevent overlapping</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="n">phase_difference_slider</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="o">=-</span><span class="mi">90</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                                              <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Phase Difference (degrees):&#39;</span><span class="p">,</span>
+                                              <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;500px&#39;</span><span class="p">),</span>
+                                              <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;description_width&#39;</span><span class="p">:</span> <span class="s1">&#39;200px&#39;</span><span class="p">})</span>
+
+<span class="n">widgets</span><span class="o">.</span><span class="n">interactive</span><span class="p">(</span><span class="n">plot_power_relationships</span><span class="p">,</span> <span class="n">phase_diff</span><span class="o">=</span><span class="n">phase_difference_slider</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "6209191f979446adabac0b61a7d02ca0", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-start-with-p-inst-and-p-avg-for-a-simple-ac-circuit">Let’s start with <span class="math notranslate nohighlight">\(P_{inst}\)</span> and <span class="math notranslate nohighlight">\(P_{avg}\)</span> for a simple AC circuit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#our-circuit">Our circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-and-current">Voltage and Current</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-analysis">Power Analysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-now-complicate-our-ac-circuit-with-inductors-and-capacitors">Let’s now complicate our AC circuit with inductors and capacitors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-math-behind-the-plots">The math behind the plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-of-the-impact-of-phase-difference-on-our-power-components">Analysis of the impact of phase difference on our power components</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By DFEC
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

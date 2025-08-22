@@ -13,7 +13,7 @@ The practice problems on this page are homeworks from prior semesters _and will 
 | 1.1  | [L2-4](_static/B1_Obj01_DCcircuits_Slides.pdf)  | [PP1.1a](_static/PPs/ECE215_PP01.pdf) <br> [PP1.1b](_static/PPs/ECE215_PP02.pdf) <br> [PP1.1c](_static/PPs/ECE215_PP03.pdf) | [PP1.1a](_static/PPs/ECE215_PP01_answers.pdf) <br> [PP1.1b](_static/PPs/ECE215_PP02_answers.pdf) <br> [PP1.1c](_static/PPs/ECE215_PP03_answers.pdf)    |
 | 1.2  | [L5](_static/B1_Obj02_CircuitProtection_Slides.pdf) | [PP1.2](_static/PPs/ECE215_PP04.pdf) | [PP1.2](_static/PPs/ECE215_PP04_answers.pdf)   |
 | 1.3  | [L6](_static/B1_Obj03_ACcircuits_Slides.pdf) | [PP1.3](_static/PPs/ECE215_PP05.pdf) | [PP1.3](_static/PPs/ECE215_PP05_answers.pdf)  |
-| 1.4  | [L7](_static/B1_Obj04_SQpowers_Slides.pdf) | [PP1.4a](_static/PPs/ECE215_PP06.pdf) <br> [PP1.4b](_static/PPs/ECE215_PP07.pdf) | [PP1.4a](_static/PPs/ECE215_PP06_answers.pdf) <br> [PP1.4b](_static/PPs/ECE215_PP07_answers.pdf)  |
+| 1.4  | [L7](_static/B1_Obj04_SQpowers_Slides.pdf), [Demo](ECE215_S_PowerDemo.ipynb) | [PP1.4a](_static/PPs/ECE215_PP06.pdf) <br> [PP1.4b](_static/PPs/ECE215_PP07.pdf) | [PP1.4a](_static/PPs/ECE215_PP06_answers.pdf) <br> [PP1.4b](_static/PPs/ECE215_PP07_answers.pdf)  |
 | 1.5  | [L8](_static/B1_Obj05_PowerEfficiency_Slides.pdf) | [PP1.5](_static/PPs/ECE215_PP07.pdf) |[PP1.5](_static/PPs/ECE215_PP07_answers.pdf) | 
 | 1.6  | [L9](_static/B1_Obj06_XFMRS_Slides.pdf)  | [PP1.6](_static/PPs/ECE215_PP08.pdf) |[PP1.6](_static/PPs/ECE215_PP08_answers.pdf) |
 | 1.7  | [L10](_static/B1_Obj07_Converters_Slides.pdf)  | [PP1.7](_static/PPs/ECE215_PP09.pdf) |[PP1.7](_static/PPs/ECE215_PP09_answers.pdf) |
